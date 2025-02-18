@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://weapon_scene"]
+
+[ext_resource type="Texture2D" uid="uid://weapon_texture" path="res://assets/weapon/1.png" id="1_weapon"]
+[ext_resource type="Script" path="res://scripts/Weapon.cs" id="2_weapon"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("2_weapon")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_weapon")
+offset = Vector2(0, -32) # Adjust this based on your weapon's size
+
+[node name="BottomPivot" type="Marker2D" parent="."]
+position = Vector2(0, 0)
+
+[node name="CenterPivot" type="Marker2D" parent="."]
+position = Vector2(0, -32) # Adjust this based on your weapon's size 

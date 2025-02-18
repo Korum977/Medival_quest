@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwu4p2kemd1ac"]
+
+[ext_resource type="Script" path="res://scripts/PlayerGUI.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ejj8ie5mq1l1" path="res://assets/heart/1.png" id="2_ggnja"]
+
+[node name="PlayerGUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="BottomLeft" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 150.0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BottomLeft"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 150.0
+grow_vertical = 0
+theme_override_constants/separation = 5
+
+[node name="HeartIcon" type="TextureRect" parent="BottomLeft/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_ggnja")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="HealthLabel" type="Label" parent="BottomLeft/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "100/100"
+vertical_alignment = 1
